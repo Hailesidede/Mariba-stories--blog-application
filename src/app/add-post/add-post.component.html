@@ -1,0 +1,62 @@
+<div class="add-post-content">
+    <div class="row">
+        <div class="col-6">
+            <h3 style="padding-top: 10px;color: black;font-size: 30px;"       
+        >Create New Post</h3>
+        </div>
+        <div class="col-4" style="border: 1px solid lightgray; padding: 10px;height: 15dvh;"  >
+            <input type="file" multiple value="select" #selectFile
+            (change)="onFileSelect($event)">
+            <div *ngFor="let file of postPayLoad.postImage; let i = index" class="mt-2">
+                <span (click)="removeImage(i)">X</span>
+                <img [src]="file.url" width="50px" height="40px">
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-10">
+            <form [formGroup]="postForm">
+                <div>
+                    <label >Title</label>
+                    <input style="height: 40px;width: 1100px;" type="text" 
+                    [formControl]="title"
+                    placeholder="Post title">
+                </div>
+                &nbsp;
+                &nbsp;                
+                <div>
+                    <label for="">Post Description</label>                   
+                    <editor ngModel [init]="{plugins : 'link'}"
+                    [formControl]="body"
+                    ></editor>                    
+                </div>       
+            </form>
+            
+        </div>
+        <div class="col-2" style="padding-top: 20px;">
+            <div class="card" style="background-color:whitesmoke;padding: 25px;float:left;">
+                <button type="submit" mat-raised-button color="primary" class="w-100">Preview</button>
+                &nbsp;
+                <button type="submit" mat-raised-button color="accent" style="padding: 20px;">Save draft</button>
+                &nbsp;
+                <button type="submit" mat-raised-button color="primary" class="w-100" (click)="publishPost(postForm)">Publish</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    
+
+      
+
+    
+
+    
+    
+    
+</div>

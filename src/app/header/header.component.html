@@ -1,0 +1,30 @@
+
+<div class="card titleBackground">
+    <span class="text-center customHeading">Story za Jaba<h1 style="padding-left: 1200px; font-size: 30px;
+    cursor: pointer;"> 
+    <mat-icon *ngIf="!isLoggedIn()"  style="font-size: 27px;padding-bottom: 20px;" (click)="login()" >account_circle</mat-icon>
+    <button *ngIf="isLoggedIn()" class="btn btn-outline-danger" color="warn" (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+    </button> 
+    </h1>
+    
+    </span>
+
+    
+    </div>
+   
+
+    <div class="mt-5 pt-5" style="height: 50px;background-color:white;border-radius: 0;display: inline;">
+        
+
+        <a class="" style="padding-left: 250px;font-size: 17px;cursor: pointer;;"  routerLink="/" routerLinkActive="text-dark">Home</a>
+        <a style="padding: 250px;font-size: 17px;cursor: pointer;" routerLink="/about" routerLinkActive="text-dark">About</a>
+        <a style="padding-left: 0px;font-size: 17px;cursor: pointer;">Contact</a>
+        <a style="padding-left: 200px;font-size: 17px;cursor: pointer;">PopularPosts</a>
+    
+    </div>
+    
+    <div class="card mt-2" style="background-color:white;border-radius: 0;">
+    
+    </div>
+

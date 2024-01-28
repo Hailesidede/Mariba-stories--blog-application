@@ -1,0 +1,23 @@
+
+<div class="" style="padding-top:5px; margin-top: 5px;">
+
+    <div *ngIf="isLoggedIn()" class="" style="margin-bottom:10px px; display: inline-table; float: right; padding-right: 20px;">
+        <button *ngIf="isAdmin()"  mat-raised-button style="width: 100px;" color="primary">Edit</button>
+        &nbsp;
+        <button *ngIf="isAdmin()" mat-raised-button style="width: 100px;padding: 10px;" color="warn" (click)="deletePost()">Remove</button>
+
+    </div>
+
+</div>
+
+<div style="padding: 20px; margin-top: 40px;">
+    <div class="card" style="padding: 20px;">
+        <h1> Title : {{post.title}}</h1>
+        <span>By : {{post.username}}</span>
+
+        <br>
+
+        <p>{{post.content}}</p>
+    </div>
+
+</div>

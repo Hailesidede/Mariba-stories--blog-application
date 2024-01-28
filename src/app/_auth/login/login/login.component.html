@@ -1,0 +1,23 @@
+<div class="container mt-3" style="display: flex;justify-content: center;">
+
+    <div class="card float-center" style="padding: 20px; width: 800px;background-color: azure;">
+        <form #loginForm="ngForm"  (ngSubmit)="login(loginForm)">
+            <mat-form-field appearance="outline" class="w-100" >
+                <mat-label>UserName</mat-label>
+                <input type="text" matInput  ngModel name="userName" id="userName" placeholder="Enter your UserName">
+              </mat-form-field>
+              
+              <mat-form-field appearance="outline" class="w-100" >
+                <mat-label>Enter your password</mat-label>
+                <input type="password" ngModel name="userPassword" id="userPassword" matInput placeholder="Placeholder">
+              </mat-form-field>
+              <button type="submit" mat-raised-button color="primary" class="w-100">Login</button>
+        </form>&nbsp; 
+        <span class="text-center mb-3">or dont have an account?</span>
+        <button mat-raised-button type="button" routerLink="/register" class="w-20 text-center" >Create an account</button>
+
+    </div>
+
+   
+
+    </div>

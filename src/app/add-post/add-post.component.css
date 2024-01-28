@@ -1,0 +1,31 @@
+.add-post-content{
+    padding: 15px;
+    border-color: black;
+}
+
+.new-post-title{
+    color: royalblue;
+}
+
+.post-content,-post-title{
+    color: royalblue;
+
+}
+
+.image_area{
+    width: 200px;
+    border: 1px solid green;
+}
+
+.btn-remove-image{
+    position: absolute;
+    cursor: pointer;
+    top: -1px;
+    right: -1px;
+    background-color: red;
+    color: white;
+    border-radius: 50px;
+    width: 20px;
+    height: auto;
+    text-align: center;
+}

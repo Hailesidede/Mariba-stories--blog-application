@@ -1,0 +1,54 @@
+<div style="display: inline;">
+   
+<div class="row">
+    <div>
+        <div *ngIf="isLoggedIn()"  style="float: right; padding-top: 5px;padding-right: 20px;;">
+            <button *ngIf="isAdmin()" mat-raised-button color="primary" routerLink="/addPost"> add New post</button>
+        </div>
+
+    </div>
+    <div class="col-8" style="border: 1px   lightblue;margin-top: 10px; margin-left: 90px; margin-right: 20px;">
+        <div *ngFor="let p of posts" class="card mb-5 mt-3" style="height: 50dvh; border: 1px  red;">
+            <div style="display: inline;">
+                <div class="col-5" style="border: 1px  greenyellow; height: 50dvh; width: 50%; float: left;">
+                    <img routerLink="/post/{{p.id}}" [src]="p.postImages[0].url" style="height: 315px;width: 430px;float: left;cursor: grab;">
+
+                </div>
+                <div class="" style="border: 1px  purple; height: 50dvh; width: 50%; float: right; display: list-item; padding-left: 0px;">
+                    <div class="" style="border:   brown; height: 10dvh; display: list-item; ">
+                        <div>
+                            <span class="millenials"> Created At : {{p.createdOn}}</span>
+
+                        </div>
+                        <div style="padding-top: 10px;">
+                            <span class="storyTitle"><i>{{p.title}}</i></span>
+                        </div>
+                    </div>
+                    <div style="border: 1px  pink; height: 8dvh;">
+
+                        this section will hold the like and comment buttons
+                    </div>
+                    <div style="border: 1px  pink; height: 8dvh;">
+                        <span>By : {{p.username}}</span>
+                    </div>
+                    <div style="border: 1px  pink; height: auto;">
+                        <span style="padding-left: 30px;position: relative;top: 1px;font-style: italic;font-family: sans-serif;
+                    ">{{p.content}}</span>
+
+                    </div>
+                    <div style="border: 1px  black; height: auto;">
+                        this div will hold the share buttons
+                    </div>
+                </div>
+            </div>      
+        </div>
+    </div>
+    <div class="col-3" style="border: 1px  lightgray;margin-top: 10px; width: 200;">
+        <div style="margin-top: 40px;">
+            <!-- <img src="assets/microsoftPhoto.png" width="250px" height="350dvh"> -->
+
+        </div>
+        
+    </div>
+</div>
+</div>

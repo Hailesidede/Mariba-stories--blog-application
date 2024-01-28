@@ -1,0 +1,37 @@
+.titleBackground{
+    background-color: white;
+    height: 130px;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+.customHeading{
+    padding-top: 50px;
+    text-transform: inherit;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px; 
+
+}
+
+.homeToolBackground{
+    
+    display: inline;
+    
+   
+    
+
+}
+
+.homeToolsElements{
+    padding-right: 200px;
+    color: black;
+}
+
+
+.accountButton{
+    justify-content: right;
+    padding: 10px;
+    border-radius: 0px;
+}
+
